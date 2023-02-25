@@ -19,6 +19,11 @@ public class ExceptionHandlerController {
         return buildErrorResponse(HttpStatus.BAD_REQUEST, e.getMessage());
     }
 
+    @ExceptionHandler(IllegalStateException.class)
+    protected ResponseEntity<Object> handleIllegalState(IllegalStateException e) {
+        return buildErrorResponse(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
     private static ResponseEntity<Object> buildErrorResponse(HttpStatus httpStatus, String message) {
         ErrorResponse response = new ErrorResponse(httpStatus.value(), httpStatus.getReasonPhrase(), message);
         return ResponseEntity.status(httpStatus.value()).body(response);
