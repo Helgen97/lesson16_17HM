@@ -2,9 +2,7 @@ package com.profItSoft.hm16_17.services.implementation;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
 import com.profItSoft.hm16_17.data.PersonData;
 import com.profItSoft.hm16_17.dto.PepStatistic;
 import com.profItSoft.hm16_17.dto.PersonDetailsDto;
